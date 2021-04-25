@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>form-marcup</title>
+</head>
+
+<body>
+<div class="conteiner">
+    <div class="content">
+        
+            <div class="content__wrapper">
+                
+                <div class="content__wrap-btn" action="" >
+                    <button class="content__btn"></button>
+                </div>
+
+                <nav class="content__nav">
+                    <ul class="content__list">
+                        <li class="content__item"><a class="content__link" href="#">Главная</a></li>
+                        <li class="content__item"><a class="content__link" href="#">Контакты</a></li>
+                        <li class="content__item"><a class="content__link" href="#">Форма обратной связи</a></li>
+                    </ul>
+                </nav>
+
+                <h1 class="content__titel">Форма обратной связи</h1>
+
+                <form class="content__top-form" action="" method="post" autocomplete="on">
+                    <input type="text" name="username" id="username" required="required"
+                        placeholder="Иванов Иван Иванович" />
+
+                    <input type="email" name="usermail" id="usermail" placeholder="Введите Ваш Email"
+                        required="required" />
+
+                    <input type="tel" name="userphone" id="userphone" placeholder="Введите Ваш телефон"
+                        required="required" />
+
+                    <textarea placeholder="Введите Ваш коментарий" required="required"></textarea>
+                    <input type="submit" value="Отправить" />
+                </form>
+
+                <div class="content__captcha">
+                    <form class="content__captcha-form" action="" method="post" autocomplete="on">
+                        <input type="url" name="useurl" id="userurl" required="required" placeholder="" />
+                        <span class="content__span">Введите код на картинке справа</span>
+                    </form>
+                    <img class="content__img" src="assets/images/capcha.png" alt="">
+                </div>
+
+            </div>
+
+    </div>
+</div>
+</body>
+
+</html>
