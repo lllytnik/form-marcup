@@ -102,6 +102,11 @@ body::after{
     color: #b8b9b9;
 }
 
+.content__item a:hover,
+.content__item a.content__link--active{
+    color: #767777;
+}
+
 /* ===TITEL=== */
 .content__titel {
     text-align: center;
@@ -111,6 +116,7 @@ body::after{
     color: #0e1010;
     position: relative;
 }
+
 
 .content__titel::before{
     content: '';
