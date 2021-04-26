@@ -11,25 +11,16 @@ h1{
     src: url(assets/font/montserrat.ttf);
 }
 
-.conteiner {
-    max-width: 920px;
-    width: 100%;
-    margin: auto;   
-}
 
 /* ===BODY=== */
 
 body {
     display: flex;
-    position: fixed; 
-    height: 100%;
-    /* top: 0;
-    left: 0;
-    overflow: auto;  
-    background-position: center; */
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
     background-size: cover;
     background-image: url(assets/images/body_background.png);
-    width: 100%;
 }
 body::after{
     content:'';
@@ -37,13 +28,20 @@ body::after{
     width: 100%;
     height: 100%;
     top: 0;
-    background-color:royalblue;
+    background-color:#002855;
     opacity: 0.5;
     z-index: -1;
 }
-/* ===CONTENT=== */
-.content {
-    
+
+/* ===FORM=== */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    position: relative;
+    padding: 75px 0 86px 0;
+    max-width: 920px;
+    width: 100%;
     background-color: #fff;
     border-radius: 35px;
     -webkit-border-radius: 35px;
@@ -52,63 +50,55 @@ body::after{
     -o-border-radius: 35px;
 }
 
-.content__wrapper {
-    display: flex;
-    align-items:center;
-    flex-direction: column;
-    position: relative;
-    padding: 75px 0 86px 0;
-}
-
 /* ===BOTTON=== */
-.content__btn{
+.form__btn-close{
     position: relative;
     outline: none;
     border: 0;
     background: transparent;
 }
-.content__btn::before{
+.form__btn-close::before{
     content:'';
     position: absolute; 
     width: 35px;
     height: 35px;
-    top: -107px;
+    top: -93px;
     left: -17px;
     background-image:url(assets/images/btn-close.svg);
     
 }
-.content__btn:hover{
+.form__btn:hover{
     cursor: pointer;
 }
 
 /* ===NAV=== */
-.content__nav {
+.form__nav {
     max-width: 299px;
     width: 100%;
     margin: 0 auto;
 }
 
-.content__list {
+.form__list {
     display: flex;
     justify-content: space-between;
     list-style: none;
 }
 
 
-.content__link {
+.form__link {
     text-decoration: none;
     font-family: Roboto;
     font-size: 12px;
     color: #b8b9b9;
 }
 
-.content__item a:hover,
-.content__item a.content__link--active{
+.form__item a:hover,
+.form__item a.form__link--active{
     color: #767777;
 }
 
 /* ===TITEL=== */
-.content__titel {
+.form__titel {
     text-align: center;
     font-family: Montserrat-Bold;
     font-size: 38px;
@@ -116,9 +106,7 @@ body::after{
     color: #0e1010;
     position: relative;
 }
-
-
-.content__titel::before{
+.form__titel::before{
     content: '';
     position: absolute;
     top: 65px;
@@ -127,10 +115,10 @@ body::after{
     height: 7px;
     background-image:url(assets/images/header_wave.png)
 }
-.content__titel::after{
+.form__titel::after{
     content: '';
     position: absolute;
-    top: -85px;
+    top: -75px;
     left: 207px;
     width: 63px;
     height: 7px;
@@ -138,7 +126,7 @@ body::after{
 }
 
 /*====INPUT/TEXTAREA TOP-FORM===*/
-.content__top-form {
+.form__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,34 +137,36 @@ body::after{
     background-color:#f8f8f8; 
 }
 
-.content__top-form>input:not([type="submit"]),
-textarea {
+.form__textarea {
     outline: none;
     width: 500px;
     padding: 14px 30px;
+    margin-top: 22px;
+    min-height: 147px;
     border: 1px solid #DBDBDB;
     color: #394b50;
     font-family: Roboto;
     font-size: 16px;
-}
-
-.content__top-form>input:not([type="submit"]):active,
-textarea:active,
-.content__top-form>input:not([type="submit"]):focus,
-textarea:focus {
-    background: #d3e6f4;
-}
-.content__top-form>input:not([type="submit"]) {
-    height: 40px;
-    margin-top: 22px;
-}
-.content__top-form>textarea {
-    width: 500px;
-    margin-top: 22px;
-    min-height: 147px;
     resize: none;
 }
-.content__top-form>input[type=submit]{
+
+.form__textarea:focus{
+    background: #d3e6f4;
+}
+.form__input:focus{
+    background: #d3e6f4;
+}
+
+.form__input{
+    width: 500px;
+    height: 40px;
+    margin-top: 22px;
+    padding: 14px 30px;
+    border: 1px solid #DBDBDB;
+    outline: none;
+    
+}
+.form__input-btn{
     cursor:pointer;
     background:none;
     border:none;
@@ -191,13 +181,12 @@ textarea:focus {
 }
 
 /*====INPUT/TEXTAREA CAPTCHA===*/
-.content__captcha{
+.form__captcha{
     display: flex;
     max-width: 500px;
-    margin: 0 auto;
     margin-top: 40px;
 }
-.content__captcha-form>input:not([type="submit"]){
+.form__input-captha{
     outline: none;
     width: 320px;
     padding: 14px 30px;
@@ -206,9 +195,9 @@ textarea:focus {
     font-family: Roboto;
     font-size: 16px;
 }
-.content__span{
+.form__span{
     color: #82a6bf;
 }
-.content__img{
+.form__img{
     margin-left: 20px;
 }

@@ -11,51 +11,52 @@
 </head>
 
 <body>
-<div class="conteiner">
-    <div class="content">
-        
-            <div class="content__wrapper">
-                
-                <div class="content__wrap-btn" action="" >
-                    <button class="content__btn" type="submit"></button>
-                </div>
 
-                <nav class="content__nav">
-                    <ul class="content__list">
-                        <li class="content__item"><a class="content__link" href="#">Главная</a></li>
-                        <li class="content__item"><a class="content__link" href="#">Контакты</a></li>
-                        <li class="content__item"><a class="content__link content__link--active" href="#">Форма обратной связи</a></li>
-                    </ul>
-                </nav>
+    <form class="form" action="" method="post" autocomplete="on">
 
-                <h1 class="content__titel">Форма обратной связи</h1>
+        <button class="form__btn-close" type="submit"></button>
 
-                <form class="content__top-form" action="" method="post" autocomplete="on">
-                    <input type="text" autofocus name="username" id="username" required="required"
-                        placeholder="Иванов Иван Иванович" />
+        <nav class="form__nav">
+            <ul class="form__list">
+                <li class="form__item">
+                    <a class="form__link" href="#">Главная</a>
+                </li>
+                <li class="form__item">
+                    <a class="form__link" href="#">Контакты</a>
+                </li>
+                <li class="form__item">
+                    <a class="form__link form__link--active" href="#">Форма обратной связи</a>
+                </li>
+            </ul>
+        </nav>
 
-                    <input type="email" name="usermail" id="usermail" placeholder="Введите Ваш Email"
-                        required="required" />
+        <h1 class="form__titel">Форма обратной связи</h1>
+        <div class="form__inner">
+            <input class="form__input form__input--username" type="text" autofocus name="username" id="username" required="required"
+                placeholder="Иванов Иван Иванович" />
 
-                    <input type="tel" name="userphone" id="userphone" placeholder="Введите Ваш телефон"
-                        required="required" />
+            <input class=" form__input form__input-email" type="email" name="usermail" id="usermail" placeholder="Введите Ваш Email"
+                required="required" />
 
-                    <textarea placeholder="Введите Ваш коментарий" required="required"></textarea>
-                    <input type="submit" value="Отправить" />
-                </form>
+            <input class="form__input form__input-tel" type="tel" name="userphone" id="userphone" placeholder="Введите Ваш телефон"
+                required="required" />
 
-                <div class="content__captcha">
-                    <form class="content__captcha-form" action="" method="post" autocomplete="on">
-                        <input type="url" name="useurl" id="userurl" required="required" placeholder="" />
-                        <span class="content__span">Введите код на картинке справа</span>
-                    </form>
-                    <img class="content__img" src="assets/images/capcha.png" alt="">
-                </div>
+            <textarea class="form__textarea" placeholder="Введите Ваш коментарий" required="required"></textarea>
+            <input class="form__input-btn" type="submit" value="Отправить" />
+        </div>
 
+
+        <div class="form__captcha">
+            <div class="form__captcha-input">
+                <input class="form__input-captha" type="url" name="useurl" id="userurl" required="required" placeholder="" />
+                <span class="form__span">Введите код на картинке справа</span>  
             </div>
+                
+            <img class="form__img" src="assets/images/capcha.png" alt="">
+        </div>
 
-    </div>
-</div>
+    </form>
+
 </body>
 
 </html>
