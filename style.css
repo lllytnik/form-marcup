@@ -27,7 +27,6 @@ body::after{
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
     background-color:#002855;
     opacity: 0.5;
     z-index: -1;
@@ -43,11 +42,12 @@ form {
     max-width: 920px;
     width: 100%;
     background-color: #fff;
-    border-radius: 35px;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-    -ms-border-radius: 35px;
-    -o-border-radius: 35px;
+    box-shadow: 0 0 36px 4px rgba(44, 22, 29, 0.3);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
 }
 
 /* ===BOTTON=== */
@@ -103,6 +103,7 @@ form {
     font-family: Montserrat-Bold;
     font-size: 38px;
     margin-top: 17px;
+    letter-spacing: -0.89px;
     color: #0e1010;
     position: relative;
 }
@@ -134,7 +135,8 @@ form {
     padding: 28px 0 50px 0;
     margin-top: 65px;
     position: relative;
-    background-color:#f8f8f8; 
+    background-color:#f8f8f8;
+    box-shadow: inset 0 0 9px 1px rgba(1, 1, 1, 0.17); 
 }
 
 .form__textarea {
